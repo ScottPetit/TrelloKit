@@ -10,5 +10,5 @@ Pod::Spec.new do |spec|
   spec.platform = :ios
   spec.requires_arc = true
   spec.frameworks = 'UIKit', 'Foundation'
-  spec.source_files = 'TrelloKit/'
+  spec.source_files = 'TrelloKit/', 'TrelloKit/Models/'
 end

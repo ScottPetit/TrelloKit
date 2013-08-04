@@ -10,6 +10,10 @@
 #warning Remove this Import
 #import "TrelloKitConstants.h"
 
+#warning Add your api key and token here
+//static NSString * const kTrelloAPIKey = @"";
+//static NSString * const kTrelloAPIToken = @"";
+
 @implementation TrelloHTTPClient
 
 + (instancetype)client

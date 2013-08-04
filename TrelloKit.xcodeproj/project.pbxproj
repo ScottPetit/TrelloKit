@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		516F2BC817A4867100BB3F2F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 516F2BC717A4867100BB3F2F /* Foundation.framework */; };
+		516F2BCA17A4867100BB3F2F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 516F2BC917A4867100BB3F2F /* CoreGraphics.framework */; };
+		516F2BCC17A4867100BB3F2F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 516F2BCB17A4867100BB3F2F /* UIKit.framework */; };
+		516F2BE117A4867100BB3F2F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 516F2BE017A4867100BB3F2F /* XCTest.framework */; };
+		516F2BE217A4867100BB3F2F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 516F2BC717A4867100BB3F2F /* Foundation.framework */; };
+		516F2BE317A4867100BB3F2F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 516F2BCB17A4867100BB3F2F /* UIKit.framework */; };
+		516F2C0717A4878800BB3F2F /* TRLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 516F2BF917A486BF00BB3F2F /* TRLAppDelegate.m */; };
+		516F2C0817A487A100BB3F2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 516F2BFB17A486BF00BB3F2F /* main.m */; };
+		516F2C0C17A48AE300BB3F2F /* TRLBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 516F2C0B17A48ADE00BB3F2F /* TRLBoard.m */; };
+		516F2C0F17A48B9A00BB3F2F /* TRLMember.m in Sources */ = {isa = PBXBuildFile; fileRef = 516F2C0E17A48B9600BB3F2F /* TRLMember.m */; };
+		516F2C1217A48D5B00BB3F2F /* TRLOrganization.m in Sources */ = {isa = PBXBuildFile; fileRef = 516F2C1117A48D5700BB3F2F /* TRLOrganization.m */; };
+		516F2C1717A4923000BB3F2F /* TrelloDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 516F2C1417A4921E00BB3F2F /* TrelloDataManager.m */; };
+		516F2C1817A4923300BB3F2F /* TrelloHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 516F2C1617A4922B00BB3F2F /* TrelloHTTPClient.m */; };
+		C1FA61C7786745EEADA75647 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 643BF6E18E664BE480D0CE9A /* libPods.a */; };
+		D22A5A7317AC9CE5007B462E /* TRLDataManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D22A5A7217AC9CE5007B462E /* TRLDataManagerTests.m */; };
+		D22A5A7417AC9D29007B462E /* TrelloDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 516F2C1417A4921E00BB3F2F /* TrelloDataManager.m */; };
+		D2A9AE3017AC8A810060C6D8 /* TRLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A9AE2F17AC8A810060C6D8 /* TRLViewController.m */; };
+		D2F70F1717ACAB0F0060ABF9 /* TRLCard.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F70F1617ACAB0F0060ABF9 /* TRLCard.m */; };
+		D2F70F1A17ACAE370060ABF9 /* TRLList.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F70F1917ACAE370060ABF9 /* TRLList.m */; };
+		D2F70F6A17AD556C0060ABF9 /* TRLLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F70F6917AD556C0060ABF9 /* TRLLabel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		516F2BE417A4867100BB3F2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 516F2BBC17A4867100BB3F2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 516F2BC317A4867100BB3F2F;
+			remoteInfo = TrelloKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		516F2BC417A4867100BB3F2F /* TrelloKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrelloKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		516F2BC717A4867100BB3F2F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		516F2BC917A4867100BB3F2F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		516F2BCB17A4867100BB3F2F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		516F2BDF17A4867100BB3F2F /* TrelloKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrelloKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		516F2BE017A4867100BB3F2F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		516F2BF817A486BF00BB3F2F /* TRLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRLAppDelegate.h; sourceTree = "<group>"; };
+		516F2BF917A486BF00BB3F2F /* TRLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TRLAppDelegate.m; sourceTree = "<group>"; };
+		516F2BFB17A486BF00BB3F2F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		516F2BFC17A486BF00BB3F2F /* TrelloKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TrelloKit-Info.plist"; sourceTree = "<group>"; };
+		516F2BFD17A486BF00BB3F2F /* TrelloKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TrelloKit-Prefix.pch"; sourceTree = "<group>"; };
+		516F2C0017A486BF00BB3F2F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		516F2C0117A486BF00BB3F2F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		516F2C0417A486BF00BB3F2F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		516F2C0517A486BF00BB3F2F /* TrelloKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TrelloKitTests-Info.plist"; sourceTree = "<group>"; };
+		516F2C0A17A48ADE00BB3F2F /* TRLBoard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRLBoard.h; sourceTree = "<group>"; };
+		516F2C0B17A48ADE00BB3F2F /* TRLBoard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TRLBoard.m; sourceTree = "<group>"; };
+		516F2C0D17A48B9500BB3F2F /* TRLMember.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRLMember.h; sourceTree = "<group>"; };
+		516F2C0E17A48B9600BB3F2F /* TRLMember.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TRLMember.m; sourceTree = "<group>"; };
+		516F2C1017A48D5700BB3F2F /* TRLOrganization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRLOrganization.h; sourceTree = "<group>"; };
+		516F2C1117A48D5700BB3F2F /* TRLOrganization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TRLOrganization.m; sourceTree = "<group>"; };
+		516F2C1317A4921E00BB3F2F /* TrelloDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrelloDataManager.h; sourceTree = "<group>"; };
+		516F2C1417A4921E00BB3F2F /* TrelloDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrelloDataManager.m; sourceTree = "<group>"; };
+		516F2C1517A4922B00BB3F2F /* TrelloHTTPClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrelloHTTPClient.h; sourceTree = "<group>"; };
+		516F2C1617A4922B00BB3F2F /* TrelloHTTPClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrelloHTTPClient.m; sourceTree = "<group>"; };
+		643BF6E18E664BE480D0CE9A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1020D17BD60497E8577A82E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		D22A5A7217AC9CE5007B462E /* TRLDataManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRLDataManagerTests.m; sourceTree = "<group>"; };
+		D2A9AE2E17AC8A810060C6D8 /* TRLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRLViewController.h; sourceTree = "<group>"; };
+		D2A9AE2F17AC8A810060C6D8 /* TRLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRLViewController.m; sourceTree = "<group>"; };
+		D2F56DD317AEE76500F74FC5 /* TrelloKitConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrelloKitConstants.h; sourceTree = "<group>"; };
+		D2F70F1517ACAB0F0060ABF9 /* TRLCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRLCard.h; sourceTree = "<group>"; };
+		D2F70F1617ACAB0F0060ABF9 /* TRLCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRLCard.m; sourceTree = "<group>"; };
+		D2F70F1817ACAE370060ABF9 /* TRLList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRLList.h; sourceTree = "<group>"; };
+		D2F70F1917ACAE370060ABF9 /* TRLList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRLList.m; sourceTree = "<group>"; };
+		D2F70F6817AD556C0060ABF9 /* TRLLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRLLabel.h; sourceTree = "<group>"; };
+		D2F70F6917AD556C0060ABF9 /* TRLLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRLLabel.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		516F2BC117A4867100BB3F2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				516F2BCA17A4867100BB3F2F /* CoreGraphics.framework in Frameworks */,
+				516F2BCC17A4867100BB3F2F /* UIKit.framework in Frameworks */,
+				516F2BC817A4867100BB3F2F /* Foundation.framework in Frameworks */,
+				C1FA61C7786745EEADA75647 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		516F2BDC17A4867100BB3F2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				516F2BE117A4867100BB3F2F /* XCTest.framework in Frameworks */,
+				516F2BE317A4867100BB3F2F /* UIKit.framework in Frameworks */,
+				516F2BE217A4867100BB3F2F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		516F2BBB17A4867100BB3F2F = {
+			isa = PBXGroup;
+			children = (
+				516F2BCD17A4867100BB3F2F /* TrelloKit */,
+				516F2BF617A486BF00BB3F2F /* Example */,
+				516F2C0217A486BF00BB3F2F /* Tests */,
+				516F2BC617A4867100BB3F2F /* Frameworks */,
+				516F2BC517A4867100BB3F2F /* Products */,
+				D1020D17BD60497E8577A82E /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		516F2BC517A4867100BB3F2F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				516F2BC417A4867100BB3F2F /* TrelloKit.app */,
+				516F2BDF17A4867100BB3F2F /* TrelloKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		516F2BC617A4867100BB3F2F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				516F2BC717A4867100BB3F2F /* Foundation.framework */,
+				516F2BC917A4867100BB3F2F /* CoreGraphics.framework */,
+				516F2BCB17A4867100BB3F2F /* UIKit.framework */,
+				516F2BE017A4867100BB3F2F /* XCTest.framework */,
+				643BF6E18E664BE480D0CE9A /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		516F2BCD17A4867100BB3F2F /* TrelloKit */ = {
+			isa = PBXGroup;
+			children = (
+				516F2C0917A48AD300BB3F2F /* Models */,
+				516F2C1317A4921E00BB3F2F /* TrelloDataManager.h */,
+				516F2C1417A4921E00BB3F2F /* TrelloDataManager.m */,
+				516F2C1517A4922B00BB3F2F /* TrelloHTTPClient.h */,
+				516F2C1617A4922B00BB3F2F /* TrelloHTTPClient.m */,
+				D2F56DD317AEE76500F74FC5 /* TrelloKitConstants.h */,
+			);
+			path = TrelloKit;
+			sourceTree = "<group>";
+		};
+		516F2BF617A486BF00BB3F2F /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				516F2BF717A486BF00BB3F2F /* Classes */,
+				516F2BFA17A486BF00BB3F2F /* Other Sources */,
+				516F2BFE17A486BF00BB3F2F /* Resources */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		516F2BF717A486BF00BB3F2F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				516F2BF817A486BF00BB3F2F /* TRLAppDelegate.h */,
+				516F2BF917A486BF00BB3F2F /* TRLAppDelegate.m */,
+				D2A9AE2E17AC8A810060C6D8 /* TRLViewController.h */,
+				D2A9AE2F17AC8A810060C6D8 /* TRLViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		516F2BFA17A486BF00BB3F2F /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				516F2BFB17A486BF00BB3F2F /* main.m */,
+				516F2BFC17A486BF00BB3F2F /* TrelloKit-Info.plist */,
+				516F2BFD17A486BF00BB3F2F /* TrelloKit-Prefix.pch */,
+			);
+			path = "Other Sources";
+			sourceTree = "<group>";
+		};
+		516F2BFE17A486BF00BB3F2F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				516F2BFF17A486BF00BB3F2F /* InfoPlist.strings */,
+				516F2C0117A486BF00BB3F2F /* Images.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		516F2C0217A486BF00BB3F2F /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				516F2C0317A486BF00BB3F2F /* InfoPlist.strings */,
+				516F2C0517A486BF00BB3F2F /* TrelloKitTests-Info.plist */,
+				D22A5A7217AC9CE5007B462E /* TRLDataManagerTests.m */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		516F2C0917A48AD300BB3F2F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				516F2C0A17A48ADE00BB3F2F /* TRLBoard.h */,
+				516F2C0B17A48ADE00BB3F2F /* TRLBoard.m */,
+				D2F70F1817ACAE370060ABF9 /* TRLList.h */,
+				D2F70F1917ACAE370060ABF9 /* TRLList.m */,
+				D2F70F1517ACAB0F0060ABF9 /* TRLCard.h */,
+				D2F70F1617ACAB0F0060ABF9 /* TRLCard.m */,
+				516F2C0D17A48B9500BB3F2F /* TRLMember.h */,
+				516F2C0E17A48B9600BB3F2F /* TRLMember.m */,
+				D2F70F6817AD556C0060ABF9 /* TRLLabel.h */,
+				D2F70F6917AD556C0060ABF9 /* TRLLabel.m */,
+				516F2C1017A48D5700BB3F2F /* TRLOrganization.h */,
+				516F2C1117A48D5700BB3F2F /* TRLOrganization.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		516F2BC317A4867100BB3F2F /* TrelloKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 516F2BF017A4867100BB3F2F /* Build configuration list for PBXNativeTarget "TrelloKit" */;
+			buildPhases = (
+				44104E7135F149C8860B8702 /* Check Pods Manifest.lock */,
+				516F2BC017A4867100BB3F2F /* Sources */,
+				516F2BC117A4867100BB3F2F /* Frameworks */,
+				516F2BC217A4867100BB3F2F /* Resources */,
+				73CDBB33AFF14A93A3D616A3 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TrelloKit;
+			productName = TrelloKit;
+			productReference = 516F2BC417A4867100BB3F2F /* TrelloKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		516F2BDE17A4867100BB3F2F /* TrelloKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 516F2BF317A4867100BB3F2F /* Build configuration list for PBXNativeTarget "TrelloKitTests" */;
+			buildPhases = (
+				516F2BDB17A4867100BB3F2F /* Sources */,
+				516F2BDC17A4867100BB3F2F /* Frameworks */,
+				516F2BDD17A4867100BB3F2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				516F2BE517A4867100BB3F2F /* PBXTargetDependency */,
+			);
+			name = TrelloKitTests;
+			productName = TrelloKitTests;
+			productReference = 516F2BDF17A4867100BB3F2F /* TrelloKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		516F2BBC17A4867100BB3F2F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TRL;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Scott Petit";
+				TargetAttributes = {
+					516F2BDE17A4867100BB3F2F = {
+						TestTargetID = 516F2BC317A4867100BB3F2F;
+					};
+				};
+			};
+			buildConfigurationList = 516F2BBF17A4867100BB3F2F /* Build configuration list for PBXProject "TrelloKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 516F2BBB17A4867100BB3F2F;
+			productRefGroup = 516F2BC517A4867100BB3F2F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				516F2BC317A4867100BB3F2F /* TrelloKit */,
+				516F2BDE17A4867100BB3F2F /* TrelloKitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		516F2BC217A4867100BB3F2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		516F2BDD17A4867100BB3F2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		44104E7135F149C8860B8702 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		73CDBB33AFF14A93A3D616A3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		516F2BC017A4867100BB3F2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				516F2C1217A48D5B00BB3F2F /* TRLOrganization.m in Sources */,
+				516F2C0F17A48B9A00BB3F2F /* TRLMember.m in Sources */,
+				D2F70F1A17ACAE370060ABF9 /* TRLList.m in Sources */,
+				516F2C0817A487A100BB3F2F /* main.m in Sources */,
+				516F2C0C17A48AE300BB3F2F /* TRLBoard.m in Sources */,
+				D2F70F1717ACAB0F0060ABF9 /* TRLCard.m in Sources */,
+				D2F70F6A17AD556C0060ABF9 /* TRLLabel.m in Sources */,
+				516F2C1717A4923000BB3F2F /* TrelloDataManager.m in Sources */,
+				516F2C0717A4878800BB3F2F /* TRLAppDelegate.m in Sources */,
+				516F2C1817A4923300BB3F2F /* TrelloHTTPClient.m in Sources */,
+				D2A9AE3017AC8A810060C6D8 /* TRLViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		516F2BDB17A4867100BB3F2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D22A5A7417AC9D29007B462E /* TrelloDataManager.m in Sources */,
+				D22A5A7317AC9CE5007B462E /* TRLDataManagerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		516F2BE517A4867100BB3F2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 516F2BC317A4867100BB3F2F /* TrelloKit */;
+			targetProxy = 516F2BE417A4867100BB3F2F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		516F2BFF17A486BF00BB3F2F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				516F2C0017A486BF00BB3F2F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		516F2C0317A486BF00BB3F2F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				516F2C0417A486BF00BB3F2F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		516F2BEE17A4867100BB3F2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		516F2BEF17A4867100BB3F2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		516F2BF117A4867100BB3F2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1020D17BD60497E8577A82E /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Example/Other Sources/TrelloKit-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Example/Other Sources/TrelloKit-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		516F2BF217A4867100BB3F2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1020D17BD60497E8577A82E /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Example/Other Sources/TrelloKit-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Example/Other Sources/TrelloKit-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		516F2BF417A4867100BB3F2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1020D17BD60497E8577A82E /* Pods.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TrelloKit.app/TrelloKit";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Xcode5-DP3.app/Contents/Developer/Library/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Example/Other Sources/TrelloKit-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Tests/TrelloKitTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		516F2BF517A4867100BB3F2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1020D17BD60497E8577A82E /* Pods.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TrelloKit.app/TrelloKit";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Xcode5-DP3.app/Contents/Developer/Library/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Example/Other Sources/TrelloKit-Prefix.pch";
+				INFOPLIST_FILE = "Tests/TrelloKitTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		516F2BBF17A4867100BB3F2F /* Build configuration list for PBXProject "TrelloKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				516F2BEE17A4867100BB3F2F /* Debug */,
+				516F2BEF17A4867100BB3F2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		516F2BF017A4867100BB3F2F /* Build configuration list for PBXNativeTarget "TrelloKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				516F2BF117A4867100BB3F2F /* Debug */,
+				516F2BF217A4867100BB3F2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		516F2BF317A4867100BB3F2F /* Build configuration list for PBXNativeTarget "TrelloKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				516F2BF417A4867100BB3F2F /* Debug */,
+				516F2BF517A4867100BB3F2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 516F2BBC17A4867100BB3F2F /* Project object */;
+}

@@ -1,0 +1,24 @@
+PODS:
+  - AFNetworking (2.0.0-RC1):
+    - AFNetworking/Core
+    - AFNetworking/UIKit+AFNetworking
+  - AFNetworking/Core (2.0.0-RC1)
+  - AFNetworking/UIKit+AFNetworking (2.0.0-RC1)
+  - MTDates (0.9.2)
+  - XOCategories (0.0.3)
+
+DEPENDENCIES:
+  - AFNetworking (~> 2.0.0-RC1)
+  - MTDates
+  - XOCategories (from `https://github.com/ScottPetit/XOCategories.git`)
+
+EXTERNAL SOURCES:
+  XOCategories:
+    :git: https://github.com/ScottPetit/XOCategories.git
+
+SPEC CHECKSUMS:
+  AFNetworking: 29456fb87c4a62a5ae1d27baf6771a2cf327089f
+  MTDates: c43db08fa53c292875a8a64664948687e5f7eb56
+  XOCategories: 9ca140cc965f7b4e06ec4cc829428098abd63b35
+
+COCOAPODS: 0.22.3

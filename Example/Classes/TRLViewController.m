@@ -8,13 +8,14 @@
 
 #import "TRLViewController.h"
 #import "TrelloDataManager.h"
+#import "TrelloHTTPClient.h"
 #import "TRLBoard.h"
 #import "TRLList.h"
 #import "TRLCard.h"
 #import "TRLLabel.h"
 
 @interface TRLViewController ()
-
+@property (nonatomic, strong) TrelloDataManager *dataManager;
 @end
 
 @implementation TRLViewController
@@ -25,10 +26,12 @@
     
     self.view.backgroundColor = [UIColor brownColor];
     
-    [[TrelloDataManager manager] openBoardsWithSuccess:^(NSHTTPURLResponse *response, NSArray *openBoards) {
+    self.dataManager = [TrelloDataManager alloc] initWithTrelloHTTPClient:[[TrelloHTTPClient alloc] initWithAppKey:kTrelloAPIKey authToken:kAuthorizatedToken]];
+    
+    [self.dataManager openBoardsWithSuccess:^(NSHTTPURLResponse *response, NSArray *openBoards) {
         TRLBoard *board = [openBoards firstObject];
         
-        [[TrelloDataManager manager] cardsDueTodayForBoard:board success:^(NSHTTPURLResponse *response, id responseObject) {
+        [self.dataManager cardsDueTodayForBoard:board success:^(NSHTTPURLResponse *response, id responseObject) {
             for (TRLCard *card in responseObject)
             {
                 TRLLabel *label = [card.labels firstObject];

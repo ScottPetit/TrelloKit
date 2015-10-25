@@ -7,24 +7,22 @@
 //
 
 #import "TrelloHTTPClient.h"
-#warning Remove this Import
-#import "TrelloKitConstants.h"
 
-#warning Add your api key and token here
-//static NSString * const kTrelloAPIKey = @"";
-//static NSString * const kTrelloAPIToken = @"";
+@interface TrelloHTTPClient ()
+@property (nonatomic, copy) NSString *appKey;
+@property (nonatomic, copy) NSString *authToken;
+@end
 
 @implementation TrelloHTTPClient
 
-+ (instancetype)client
+- (instancetype)initWithAppKey:(NSString *)appKey authToken:(NSString *)token
 {
-    static TrelloHTTPClient *sharedClient = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        NSURL *baseURL = [NSURL URLWithString:@"https://api.trello.com/1/"];
-        sharedClient = [[self alloc] initWithBaseURL:baseURL];
-    });
-    return sharedClient;
+    self = [super initWithBaseURL:[NSURL URLWithString:@"https://api.trello.com/1/"]];
+    if (self) {
+        self.appKey = appKey;
+        self.authToken = token;
+    }
+    return self;
 }
 
 #pragma mark - Boards
@@ -161,8 +159,8 @@
     }
     
     NSMutableDictionary *mutableParamaters = [NSMutableDictionary dictionaryWithDictionary:parameters];
-    [mutableParamaters setObject:kTrelloAPIKey forKey:@"key"];
-    [mutableParamaters setObject:kTrelloAPIToken forKey:@"token"];
+    mutableParamaters[@"key"] = self.appKey;
+    mutableParamaters[@"token"] = self.authToken;
     
     NSURL *url = [NSURL URLWithString:path relativeToURL:self.baseURL];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];

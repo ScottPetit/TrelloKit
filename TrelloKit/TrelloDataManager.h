@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+@class TrelloHTTPClient;
 @class TRLBoard;
 @class TRLList;
 
@@ -16,7 +17,7 @@ typedef void (^TrelloDataManagerFailure)(NSError *error);
 
 @interface TrelloDataManager : NSObject
 
-+ (instancetype)manager;
+- (instancetype)initWithTrelloHTTPClient:(TrelloHTTPClient *)client;
 
 @property (nonatomic, strong) NSArray *boards;
 @property (nonatomic, strong) NSArray *openBoards;

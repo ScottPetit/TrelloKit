@@ -13,7 +13,7 @@ typedef void (^TrelloHTTPClientFailure)(NSError *error);
 
 @interface TrelloHTTPClient : AFHTTPClient
 
-+ (instancetype)client;
+- (instancetype)initWithAppKey:(NSString *)appKey authToken:(NSString *)token;
 
 //Boards
 - (void)getBoardsWithSuccess:(TrelloHTTPClientSuccess)success failure:(TrelloHTTPClientFailure)failure;

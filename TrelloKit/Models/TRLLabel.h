@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 Scott Petit. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
+
 @interface TRLLabel : NSObject
 
 + (instancetype)labelFromDictionary:(NSDictionary *)dictionary;

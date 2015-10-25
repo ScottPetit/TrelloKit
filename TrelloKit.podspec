@@ -11,4 +11,5 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true
   spec.frameworks = 'UIKit', 'Foundation'
   spec.source_files = 'TrelloKit/', 'TrelloKit/Models'
+  spec.dependency 'MTDates', '1.0.2'
 end

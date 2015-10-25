@@ -7,8 +7,8 @@ Pod::Spec.new do |spec|
   spec.source = {:git => 'https://github.com/ScottPetit/TrelloKit.git', :tag => "v#{spec.version}"}
   spec.license = { :type => 'MIT', :file => 'LICENSE' }
 
+  spec.platform = 'ios'
   spec.ios.deployment_target = '7.0'
-  spec.osx.deployment_target = '10.9'
 
   spec.requires_arc = true
   spec.frameworks = 'Foundation', 'UIKit'

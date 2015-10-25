@@ -32,7 +32,7 @@
 
 - (void)boardsWithSuccess:(TrelloDataManagerSuccess)success failure:(TrelloDataManagerFailure)failure
 {
-    [self.client getBoardsWithSuccess:^(NSHTTPURLResponse *response, id responseObject) {
+    [self.client getBoardsWithSuccess:^(NSURLSessionDataTask *response, id responseObject) {
         
         NSMutableArray *boards = [NSMutableArray array];
         for (NSDictionary *boardsDictionary in responseObject)
@@ -47,17 +47,17 @@
         {
             success(response, boards);
         }
-    } failure:^(NSError *error) {
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
         if (failure)
         {
-            failure(error);
+            failure(task, error);
         }
     }];
 }
 
 - (void)openBoardsWithSuccess:(TrelloDataManagerSuccess)success failure:(TrelloDataManagerFailure)failure
 {
-    [self.client getBoardsWithSuccess:^(NSHTTPURLResponse *response, id responseObject) {
+    [self.client getBoardsWithSuccess:^(NSURLSessionDataTask *response, id responseObject) {
         NSMutableArray *boards = [NSMutableArray array];
         for (NSDictionary *boardsDictionary in responseObject)
         {
@@ -81,10 +81,10 @@
             success(response, mutableBoards);
         }
         
-    } failure:^(NSError *error) {
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
         if (failure)
         {
-            failure(error);
+            failure(task, error);
         }
     }];
 }
@@ -98,15 +98,15 @@
         return;
     }
     
-    [self.client getBoardWithIdentifer:identifier success:^(NSHTTPURLResponse *response, id responseObject) {
+    [self.client getBoardWithIdentifer:identifier success:^(NSURLSessionDataTask *response, id responseObject) {
         if (success)
         {
             success(response, responseObject);
         }
-    } failure:^(NSError *error) {
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
         if (failure)
         {
-            failure(error);
+            failure(task, error);
         }
     }];
 }
@@ -122,7 +122,7 @@
         return;
     }
     
-    [self.client getListsForBoardWithIdentifier:board.identifier success:^(NSHTTPURLResponse *response, id responseObject) {
+    [self.client getListsForBoardWithIdentifier:board.identifier success:^(NSURLSessionDataTask *response, id responseObject) {
         NSMutableArray *lists = [NSMutableArray array];
         for (NSDictionary *listsDictionary in responseObject)
         {
@@ -134,8 +134,11 @@
         {
             success(responseObject, lists);
         }
-    } failure:^(NSError *error) {
-        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        if (failure)
+        {
+            failure(task, error);
+        }
     }];
 }
 
@@ -143,7 +146,7 @@
 {
     NSParameterAssert(boardIdentifier.length);
     
-    [self.client getListsForBoardWithIdentifier:boardIdentifier success:^(NSHTTPURLResponse *response, id responseObject) {
+    [self.client getListsForBoardWithIdentifier:boardIdentifier success:^(NSURLSessionDataTask *response, id responseObject) {
         NSMutableArray *lists = [NSMutableArray array];
         for (NSDictionary *listsDictionary in responseObject)
         {
@@ -155,8 +158,11 @@
         {
             success(responseObject, lists);
         }
-    } failure:^(NSError *error) {
-        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        if (failure)
+        {
+            failure(task, error);
+        }
     }];
 }
 
@@ -172,7 +178,7 @@
     NSParameterAssert(boardIdentifier);
     NSAssert(boardIdentifier.length, @"Can not handle a board identifer with no length");
     
-    [self.client getCardsForBoardWithIdentifier:boardIdentifier success:^(NSHTTPURLResponse *response, id responseObject) {
+    [self.client getCardsForBoardWithIdentifier:boardIdentifier success:^(NSURLSessionDataTask *response, id responseObject) {
         NSMutableArray *cardsArray = [NSMutableArray array];
         for (NSDictionary *cardsDictionary in responseObject)
         {
@@ -184,8 +190,11 @@
         {
             success(responseObject, cardsArray);
         }
-    } failure:^(NSError *error) {
-        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        if (failure)
+        {
+            failure(task, error);
+        }
     }];
 }
 
@@ -198,7 +207,7 @@
         return;
     }
     
-    [self.client getCardsForBoardWithIdentifier:board.identifier success:^(NSHTTPURLResponse *response, id responseObject) {
+    [self.client getCardsForBoardWithIdentifier:board.identifier success:^(NSURLSessionDataTask *response, id responseObject) {
         NSMutableArray *cardsArray = [NSMutableArray array];
         for (NSDictionary *cardsDictionary in responseObject)
         {
@@ -219,10 +228,10 @@
         {
             success(response, dueCards);
         }        
-    } failure:^(NSError *error) {
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
         if (failure)
         {
-            failure(error);
+            failure(task, error);
         }
     }];
 }
@@ -241,7 +250,7 @@
         return;
     }
     
-    [self.client getCardsForListWithIdentifier:listIdentifier success:^(NSHTTPURLResponse *response, id responseObject) {
+    [self.client getCardsForListWithIdentifier:listIdentifier success:^(NSURLSessionDataTask *response, id responseObject) {
         NSMutableArray *cards = [NSMutableArray array];
         for (NSDictionary *cardsDictionary in responseObject)
         {
@@ -253,25 +262,25 @@
         {
             success(response, cards);
         }
-    } failure:^(NSError *error) {
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
         if (failure)
         {
-            failure(error);
+            failure(task, error);
         }
     }];
 }
 
 - (void)cardsWithSuccess:(TrelloDataManagerSuccess)success failure:(TrelloDataManagerFailure)failure
 {
-    [self.client getCardsWithSuccess:^(NSHTTPURLResponse *response, id responseObject) {
+    [self.client getCardsWithSuccess:^(NSURLSessionDataTask *response, id responseObject) {
         if (success)
         {
             success(response, responseObject);
         }
-    } failure:^(NSError *error) {
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
         if (failure)
         {
-            failure(error);
+            failure(task, error);
         }
     }];
 }
@@ -285,10 +294,13 @@
         return;
     }
     
-    [self.client getCardWithIdentifier:identifier success:^(NSHTTPURLResponse *response, id responseObject) {
+    [self.client getCardWithIdentifier:identifier success:^(NSURLSessionDataTask *response, id responseObject) {
         
-    } failure:^(NSError *error) {
-        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        if (failure)
+        {
+            failure(task, error);
+        }
     }];
 }
 

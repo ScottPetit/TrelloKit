@@ -24,6 +24,8 @@
 		D22A5A7317AC9CE5007B462E /* TRLDataManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D22A5A7217AC9CE5007B462E /* TRLDataManagerTests.m */; };
 		D22A5A7417AC9D29007B462E /* TrelloDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 516F2C1417A4921E00BB3F2F /* TrelloDataManager.m */; };
 		D2A9AE3017AC8A810060C6D8 /* TRLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A9AE2F17AC8A810060C6D8 /* TRLViewController.m */; };
+		D2CDB8061BDD508600DED4D6 /* UIColor+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D2CDB8051BDD508600DED4D6 /* UIColor+Extensions.m */; };
+		D2CDB8091BDD509200DED4D6 /* NSDictionary+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D2CDB8081BDD509200DED4D6 /* NSDictionary+Extensions.m */; };
 		D2F70F1717ACAB0F0060ABF9 /* TRLCard.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F70F1617ACAB0F0060ABF9 /* TRLCard.m */; };
 		D2F70F1A17ACAE370060ABF9 /* TRLList.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F70F1917ACAE370060ABF9 /* TRLList.m */; };
 		D2F70F6A17AD556C0060ABF9 /* TRLLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F70F6917AD556C0060ABF9 /* TRLLabel.m */; };
@@ -66,17 +68,21 @@
 		516F2C1517A4922B00BB3F2F /* TrelloHTTPClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrelloHTTPClient.h; sourceTree = "<group>"; };
 		516F2C1617A4922B00BB3F2F /* TrelloHTTPClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrelloHTTPClient.m; sourceTree = "<group>"; };
 		643BF6E18E664BE480D0CE9A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		D1020D17BD60497E8577A82E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		8A7789EE09A1AA3EFE2FFEB2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D22A5A7217AC9CE5007B462E /* TRLDataManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRLDataManagerTests.m; sourceTree = "<group>"; };
 		D2A9AE2E17AC8A810060C6D8 /* TRLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRLViewController.h; sourceTree = "<group>"; };
 		D2A9AE2F17AC8A810060C6D8 /* TRLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRLViewController.m; sourceTree = "<group>"; };
-		D2F56DD317AEE76500F74FC5 /* TrelloKitConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrelloKitConstants.h; sourceTree = "<group>"; };
+		D2CDB8041BDD508600DED4D6 /* UIColor+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extensions.h"; sourceTree = "<group>"; };
+		D2CDB8051BDD508600DED4D6 /* UIColor+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extensions.m"; sourceTree = "<group>"; };
+		D2CDB8071BDD509200DED4D6 /* NSDictionary+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Extensions.h"; sourceTree = "<group>"; };
+		D2CDB8081BDD509200DED4D6 /* NSDictionary+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Extensions.m"; sourceTree = "<group>"; };
 		D2F70F1517ACAB0F0060ABF9 /* TRLCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRLCard.h; sourceTree = "<group>"; };
 		D2F70F1617ACAB0F0060ABF9 /* TRLCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRLCard.m; sourceTree = "<group>"; };
 		D2F70F1817ACAE370060ABF9 /* TRLList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRLList.h; sourceTree = "<group>"; };
 		D2F70F1917ACAE370060ABF9 /* TRLList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRLList.m; sourceTree = "<group>"; };
 		D2F70F6817AD556C0060ABF9 /* TRLLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRLLabel.h; sourceTree = "<group>"; };
 		D2F70F6917AD556C0060ABF9 /* TRLLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRLLabel.m; sourceTree = "<group>"; };
+		D8C52A328826C94B0AA83E00 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +118,7 @@
 				516F2C0217A486BF00BB3F2F /* Tests */,
 				516F2BC617A4867100BB3F2F /* Frameworks */,
 				516F2BC517A4867100BB3F2F /* Products */,
-				D1020D17BD60497E8577A82E /* Pods.xcconfig */,
+				C5DF27097DBD567F3FEC18F0 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,12 +146,12 @@
 		516F2BCD17A4867100BB3F2F /* TrelloKit */ = {
 			isa = PBXGroup;
 			children = (
+				D2CDB8031BDD505E00DED4D6 /* Extensions */,
 				516F2C0917A48AD300BB3F2F /* Models */,
 				516F2C1317A4921E00BB3F2F /* TrelloDataManager.h */,
 				516F2C1417A4921E00BB3F2F /* TrelloDataManager.m */,
 				516F2C1517A4922B00BB3F2F /* TrelloHTTPClient.h */,
 				516F2C1617A4922B00BB3F2F /* TrelloHTTPClient.m */,
-				D2F56DD317AEE76500F74FC5 /* TrelloKitConstants.h */,
 			);
 			path = TrelloKit;
 			sourceTree = "<group>";
@@ -219,6 +225,26 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		C5DF27097DBD567F3FEC18F0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8A7789EE09A1AA3EFE2FFEB2 /* Pods.debug.xcconfig */,
+				D8C52A328826C94B0AA83E00 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D2CDB8031BDD505E00DED4D6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D2CDB8041BDD508600DED4D6 /* UIColor+Extensions.h */,
+				D2CDB8051BDD508600DED4D6 /* UIColor+Extensions.m */,
+				D2CDB8071BDD509200DED4D6 /* NSDictionary+Extensions.h */,
+				D2CDB8081BDD509200DED4D6 /* NSDictionary+Extensions.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -231,6 +257,7 @@
 				516F2BC117A4867100BB3F2F /* Frameworks */,
 				516F2BC217A4867100BB3F2F /* Resources */,
 				73CDBB33AFF14A93A3D616A3 /* Copy Pods Resources */,
+				8F5A53C931285152B3A17A57 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -337,7 +364,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F5A53C931285152B3A17A57 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -352,12 +394,14 @@
 				D2F70F1A17ACAE370060ABF9 /* TRLList.m in Sources */,
 				516F2C0817A487A100BB3F2F /* main.m in Sources */,
 				516F2C0C17A48AE300BB3F2F /* TRLBoard.m in Sources */,
+				D2CDB8091BDD509200DED4D6 /* NSDictionary+Extensions.m in Sources */,
 				D2F70F1717ACAB0F0060ABF9 /* TRLCard.m in Sources */,
 				D2F70F6A17AD556C0060ABF9 /* TRLLabel.m in Sources */,
 				516F2C1717A4923000BB3F2F /* TrelloDataManager.m in Sources */,
 				516F2C0717A4878800BB3F2F /* TRLAppDelegate.m in Sources */,
 				516F2C1817A4923300BB3F2F /* TrelloHTTPClient.m in Sources */,
 				D2A9AE3017AC8A810060C6D8 /* TRLViewController.m in Sources */,
+				D2CDB8061BDD508600DED4D6 /* UIColor+Extensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,7 +516,7 @@
 		};
 		516F2BF117A4867100BB3F2F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1020D17BD60497E8577A82E /* Pods.xcconfig */;
+			baseConfigurationReference = 8A7789EE09A1AA3EFE2FFEB2 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -486,7 +530,7 @@
 		};
 		516F2BF217A4867100BB3F2F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1020D17BD60497E8577A82E /* Pods.xcconfig */;
+			baseConfigurationReference = D8C52A328826C94B0AA83E00 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -500,7 +544,6 @@
 		};
 		516F2BF417A4867100BB3F2F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1020D17BD60497E8577A82E /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TrelloKit.app/TrelloKit";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -523,7 +566,6 @@
 		};
 		516F2BF517A4867100BB3F2F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1020D17BD60497E8577A82E /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TrelloKit.app/TrelloKit";
 				FRAMEWORK_SEARCH_PATHS = (

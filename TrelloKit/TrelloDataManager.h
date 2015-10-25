@@ -12,8 +12,8 @@
 @class TRLBoard;
 @class TRLList;
 
-typedef void (^TrelloDataManagerSuccess)(NSHTTPURLResponse *response, id responseObject);
-typedef void (^TrelloDataManagerFailure)(NSError *error);
+typedef void (^TrelloDataManagerSuccess)(NSURLSessionDataTask *task, id responseObject);
+typedef void (^TrelloDataManagerFailure)(NSURLSessionDataTask *task, NSError *error);
 
 @interface TrelloDataManager : NSObject
 

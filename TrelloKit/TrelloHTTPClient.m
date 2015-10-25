@@ -29,15 +29,15 @@
 
 - (void)getBoardsWithSuccess:(TrelloHTTPClientSuccess)success failure:(TrelloHTTPClientFailure)failure
 {
-    [self GET:@"members/my/boards" parameters:nil success:^(NSHTTPURLResponse *response, id responseObject) {
+    [self GET:@"members/my/boards" parameters:nil success:^(NSURLSessionDataTask *response, id responseObject) {
         if (success)
         {
             success(response, responseObject);
         }
-    } failure:^(NSError *error) {
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
         if (failure)
         {
-            failure(error);
+            failure(task, error);
         }
     }];
 }
@@ -45,15 +45,15 @@
 - (void)getBoardWithIdentifer:(NSString *)identifier success:(TrelloHTTPClientSuccess)success failure:(TrelloHTTPClientFailure)failure
 {
     NSString *path = [NSString stringWithFormat:@"boards/%@", identifier];
-    [self GET:path parameters:nil success:^(NSHTTPURLResponse *response, id responseObject) {
+    [self GET:path parameters:nil success:^(NSURLSessionDataTask *response, id responseObject) {
         if (success)
         {
             success(response, responseObject);
         }
-    } failure:^(NSError *error) {
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
         if (failure)
         {
-            failure(error);
+            failure(task, error);
         }
     }];
 }
@@ -70,15 +70,15 @@
     }
     
     NSString *path = [NSString stringWithFormat:@"boards/%@/lists", boardIdentifier];
-    [self GET:path parameters:Nil success:^(NSHTTPURLResponse *response, id responseObject) {
+    [self GET:path parameters:Nil success:^(NSURLSessionDataTask *response, id responseObject) {
         if (success)
         {
             success(response, responseObject);
         }
-    } failure:^(NSError *error) {
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
         if (failure)
         {
-            failure(error);
+            failure(task, error);
         }
     }];
 }
@@ -88,15 +88,15 @@
 - (void)getCardsForBoardWithIdentifier:(NSString *)boardIdentifier success:(TrelloHTTPClientSuccess)success failure:(TrelloHTTPClientFailure)failure
 {
     NSString *path = [NSString stringWithFormat:@"boards/%@/cards", boardIdentifier];
-    [self GET:path parameters:nil success:^(NSHTTPURLResponse *response, id responseObject) {
+    [self GET:path parameters:nil success:^(NSURLSessionDataTask *response, id responseObject) {
         if (success)
         {
             success(responseObject, responseObject);
         }
-    } failure:^(NSError *error) {
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
         if (failure)
         {
-            failure(error);
+            failure(task, error);
         }
     }];
 }
@@ -104,30 +104,30 @@
 - (void)getCardsForListWithIdentifier:(NSString *)listIdentifier success:(TrelloHTTPClientSuccess)success failure:(TrelloHTTPClientFailure)failure
 {
     NSString *path = [NSString stringWithFormat:@"lists/%@/cards", listIdentifier];
-    [self GET:path parameters:nil success:^(NSHTTPURLResponse *response, id responseObject) {
+    [self GET:path parameters:nil success:^(NSURLSessionDataTask *response, id responseObject) {
         if (success)
         {
             success(response, responseObject);
         }
-    } failure:^(NSError *error) {
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
         if (failure)
         {
-            failure(error);
+            failure(task, error);
         }
     }];
 }
 
 - (void)getCardsWithSuccess:(TrelloHTTPClientSuccess)success failure:(TrelloHTTPClientFailure)failure
 {
-    [self GET:@"members/my/cards" parameters:nil success:^(NSHTTPURLResponse *response, id responseObject) {
+    [self GET:@"members/my/cards" parameters:nil success:^(NSURLSessionDataTask *response, id responseObject) {
         if (success)
         {
             success(response, responseObject);
         }
-    } failure:^(NSError *error) {
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
         if (failure)
         {
-            failure(error);
+            failure(task, error);
         }
     }];
 }
@@ -135,15 +135,15 @@
 - (void)getCardWithIdentifier:(NSString *)identifier success:(TrelloHTTPClientSuccess)success failure:(TrelloHTTPClientFailure)failure
 {
     NSString *path = [NSString stringWithFormat:@"cards/%@", identifier];
-    [self GET:path parameters:nil success:^(NSHTTPURLResponse *response, id responseObject) {
+    [self GET:path parameters:nil success:^(NSURLSessionDataTask *response, id responseObject) {
         if (success)
         {
             success(response, responseObject);
         }
-    } failure:^(NSError *error) {
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
         if (failure)
         {
-            failure(error);
+            failure(task, error);
         }
     }];
 }

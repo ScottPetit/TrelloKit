@@ -18,6 +18,9 @@
 @property (nonatomic, strong) TrelloDataManager *dataManager;
 @end
 
+static NSString * const kTrelloAPIKey = @"";
+static NSString * const kTrelloAuthToken = @"";
+
 @implementation TRLViewController
 
 - (void)viewDidLoad
@@ -26,22 +29,22 @@
     
     self.view.backgroundColor = [UIColor brownColor];
     
-    self.dataManager = [TrelloDataManager alloc] initWithTrelloHTTPClient:[[TrelloHTTPClient alloc] initWithAppKey:kTrelloAPIKey authToken:kAuthorizatedToken]];
+    self.dataManager = [[TrelloDataManager alloc] initWithTrelloHTTPClient:[[TrelloHTTPClient alloc] initWithAppKey:kTrelloAPIKey authToken:kTrelloAuthToken]];
     
-    [self.dataManager openBoardsWithSuccess:^(NSHTTPURLResponse *response, NSArray *openBoards) {
+    [self.dataManager openBoardsWithSuccess:^(NSURLSessionDataTask *response, NSArray *openBoards) {
         TRLBoard *board = [openBoards firstObject];
         
-        [self.dataManager cardsDueTodayForBoard:board success:^(NSHTTPURLResponse *response, id responseObject) {
+        [self.dataManager cardsDueTodayForBoard:board success:^(NSURLSessionDataTask *response, id responseObject) {
             for (TRLCard *card in responseObject)
             {
                 TRLLabel *label = [card.labels firstObject];
                 self.view.backgroundColor = label.color;
             }
-        } failure:^(NSError *error) {
+        } failure:^(NSURLSessionDataTask *task, NSError *error) {
             
         }];
-    } failure:^(NSError *error) {
-        NSLog(@"Failure with error - %@", error);
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        
     }];
 }
 

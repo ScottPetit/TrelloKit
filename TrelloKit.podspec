@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = 'TrelloKit'
-  spec.version = '0.0.1'
+  spec.version = '0.0.2'
   spec.authors = {'Scott Petit' => 'petit.scott@gmail.com'}
   spec.homepage = 'https://github.com/scottpetit/TrelloKit'
   spec.summary = 'An Objective-C wrapped for the Trello API.'
@@ -14,4 +14,5 @@ Pod::Spec.new do |spec|
   spec.frameworks = 'Foundation'
   spec.source_files = 'TrelloKit/', 'TrelloKit/Models'
   spec.dependency 'MTDates', '1.0.2'
+  spec.dependency 'AFNetworking', '~> 2.5.0'
 end

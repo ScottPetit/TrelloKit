@@ -7,8 +7,8 @@
 //
 
 #import "TRLLabel.h"
-#import "NSDictionary+XOAdditions.h"
-#import "UIColor+XOAdditions.h"
+#import "NSDictionary+Extensions.h"
+#import "UIColor+Extensions.h"
 
 @implementation TRLLabel
 
@@ -22,8 +22,8 @@
     self = [super init];
     if (self)
     {
-        _color = [UIColor xo_colorFromString:[dictionary xo_safeObjectForKey:@"color"]];
-        _name = [dictionary xo_safeCopyForKey:@"name"];
+        _color = [UIColor trello_colorFromString:[dictionary trello_safeObjectForKey:@"color"]];
+        _name = [dictionary trello_safeCopyForKey:@"name"];
     }
     return self;
 }

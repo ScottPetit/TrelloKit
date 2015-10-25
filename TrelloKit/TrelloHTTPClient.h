@@ -6,14 +6,14 @@
 //  Copyright (c) 2013 Scott Petit. All rights reserved.
 //
 
-#import "AFHTTPClient.h"
+#import <AFNetworking/AFNetworking.h>
 
-typedef void (^TrelloHTTPClientSuccess)(NSHTTPURLResponse *response, id responseObject);
-typedef void (^TrelloHTTPClientFailure)(NSError *error);
+typedef void (^TrelloHTTPClientSuccess)(NSURLSessionDataTask *response, id responseObject);
+typedef void (^TrelloHTTPClientFailure)(NSURLSessionDataTask *task, NSError *error);
 
-@interface TrelloHTTPClient : AFHTTPClient
+@interface TrelloHTTPClient : AFHTTPSessionManager
 
-+ (instancetype)client;
+- (instancetype)initWithAppKey:(NSString *)appKey authToken:(NSString *)token;
 
 //Boards
 - (void)getBoardsWithSuccess:(TrelloHTTPClientSuccess)success failure:(TrelloHTTPClientFailure)failure;

@@ -8,7 +8,7 @@
 
 #import "TRLCard.h"
 #import "NSDate+MTDates.h"
-#import "NSDictionary+XOAdditions.h"
+#import "NSDictionary+Extensions.h"
 #import "TRLLabel.h"
 
 @implementation TRLCard
@@ -23,17 +23,17 @@
     self = [super init];
     if (self)
     {
-        _identifier = [dictionary xo_safeCopyForKey:@"id"];
-        _name = [dictionary xo_safeCopyForKey:@"name"];
-        _cardDescription = [dictionary xo_safeCopyForKey:@"desc"];
-        _boardIdentifier = [dictionary xo_safeCopyForKey:@"idBoard"];
-        _listIdentifier = [dictionary xo_safeCopyForKey:@"idList"];
+        _identifier = [dictionary trello_safeCopyForKey:@"id"];
+        _name = [dictionary trello_safeCopyForKey:@"name"];
+        _cardDescription = [dictionary trello_safeCopyForKey:@"desc"];
+        _boardIdentifier = [dictionary trello_safeCopyForKey:@"idBoard"];
+        _listIdentifier = [dictionary trello_safeCopyForKey:@"idList"];
         _closed = [dictionary[@"closed"] boolValue];
         _position = [dictionary[@"pos"] integerValue];
-        _url = [[NSURL URLWithString:[dictionary xo_safeObjectForKey:@"url"]] copy];
-        _memberIdentifiers = [dictionary xo_safeObjectForKey:@"members"];
+        _url = [[NSURL URLWithString:[dictionary trello_safeObjectForKey:@"url"]] copy];
+        _memberIdentifiers = [dictionary trello_safeObjectForKey:@"members"];
         
-        NSArray *labelsArray = [dictionary xo_safeObjectForKey:@"labels"];
+        NSArray *labelsArray = [dictionary trello_safeObjectForKey:@"labels"];
         NSMutableArray *mutableLabels = [NSMutableArray arrayWithCapacity:labelsArray.count];
         for (NSDictionary *labelsDictionary in labelsArray)
         {
@@ -42,7 +42,7 @@
         }
         _labels = mutableLabels;
         
-        NSString *dueString = [dictionary xo_safeCopyForKey:@"due"];
+        NSString *dueString = [dictionary trello_safeCopyForKey:@"due"];
         if (dueString)
         {
             NSString *newDueString = [dueString stringByReplacingCharactersInRange:NSMakeRange(dueString.length - 5, 5) withString:@""];

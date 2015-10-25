@@ -25,7 +25,8 @@
         _boardDescription = [dictionary[@"desc"] copy];
         _closed = [dictionary[@"closed"] boolValue];
         _organizationIdentifier = [dictionary[@"idOrganization"] copy];
-        _pinned = [dictionary[@"pinned"] boolValue];
+        id pinned = dictionary[@"pinned"];
+        _pinned = [pinned isKindOfClass:NSNumber.class] ? [pinned boolValue] : NO;
         _url = [[NSURL URLWithString:dictionary[@"url"]] copy];
     }
     return self;

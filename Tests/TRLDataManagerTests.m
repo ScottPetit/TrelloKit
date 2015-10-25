@@ -21,7 +21,7 @@
 {
     [super setUp];
     
-    self.dataManager = [TrelloDataManager manager];
+    self.dataManager = [[TrelloDataManager alloc] initWithTrelloHTTPClient:nil];
 }
 
 - (void)testThatBoardsThrowsWithoutAnIdentifier

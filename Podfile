@@ -1,5 +1,4 @@
 platform :ios, '7.0'
 
-pod "AFNetworking", "~> 2.0.0-RC1"
+pod "AFNetworking", "~> 2.5.0"
 pod 'MTDates'
-pod 'XOCategories', :git => "https://github.com/ScottPetit/XOCategories.git"

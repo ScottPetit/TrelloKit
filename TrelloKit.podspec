@@ -14,5 +14,5 @@ Pod::Spec.new do |spec|
   spec.frameworks = 'Foundation', 'UIKit'
   spec.source_files = 'TrelloKit/', 'TrelloKit/Models', 'TrelloKit/Extensions'
   spec.dependency 'MTDates', '1.0.2'
-  spec.dependency 'AFNetworking', '~> 2.5.0'
+  spec.dependency 'AFNetworking/NSURLSession', '~> 2.5.0'
 end

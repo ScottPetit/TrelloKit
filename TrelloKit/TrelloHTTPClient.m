@@ -13,6 +13,14 @@
 @property (nonatomic, copy) NSString *authToken;
 @end
 
+@interface AFHTTPSessionManager ()
+- (NSURLSessionDataTask *)dataTaskWithHTTPMethod:(NSString *)method
+                                       URLString:(NSString *)URLString
+                                      parameters:(id)parameters
+                                         success:(void (^)(NSURLSessionDataTask *, id))success
+                                         failure:(void (^)(NSURLSessionDataTask *, NSError *))failure;
+@end
+
 @implementation TrelloHTTPClient
 
 - (instancetype)initWithAppKey:(NSString *)appKey authToken:(NSString *)token
@@ -150,27 +158,15 @@
 
 #pragma mark - Overrides
 
-- (NSMutableURLRequest *)requestWithMethod:(NSString *)method path:(NSString *)path parameters:(NSDictionary *)parameters
-{
-    NSParameterAssert(method);
-    
-    if (!path) {
-        path = @"";
-    }
-    
-    NSMutableDictionary *mutableParamaters = [NSMutableDictionary dictionaryWithDictionary:parameters];
+- (NSURLSessionDataTask *)dataTaskWithHTTPMethod:(NSString *)method
+                                       URLString:(NSString *)URLString
+                                      parameters:(id)parameters
+                                         success:(void (^)(NSURLSessionDataTask *, id))success
+                                         failure:(void (^)(NSURLSessionDataTask *, NSError *))failure {
+    NSMutableDictionary *mutableParamaters = [parameters isKindOfClass:[NSDictionary class]] ? [parameters mutableCopy] : [NSMutableDictionary dictionaryWithCapacity:2];
     mutableParamaters[@"key"] = self.appKey;
     mutableParamaters[@"token"] = self.authToken;
-    
-    NSURL *url = [NSURL URLWithString:path relativeToURL:self.baseURL];
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
-    [request setHTTPMethod:method];
-    [request setAllHTTPHeaderFields:[self.session.configuration HTTPAdditionalHeaders]];
-    if (self.requestSerializer) {
-        request = [[self.requestSerializer requestBySerializingRequest:request withParameters:mutableParamaters error:nil] mutableCopy];
-    }
-    
-	return request;
+    return [super dataTaskWithHTTPMethod:method URLString:URLString parameters:mutableParamaters success:success failure:failure];
 }
 
 @end

@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Scott Petit. All rights reserved.
 //
 
-#import <AFNetworking/AFNetworking.h>
+#import <AFNetworking/AFHTTPSessionManager.h>
 
 typedef void (^TrelloHTTPClientSuccess)(NSURLSessionDataTask *response, id responseObject);
 typedef void (^TrelloHTTPClientFailure)(NSURLSessionDataTask *task, NSError *error);

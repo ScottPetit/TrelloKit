@@ -31,7 +31,7 @@
         _closed = [dictionary[@"closed"] boolValue];
         _position = [dictionary[@"pos"] integerValue];
         _url = [[NSURL URLWithString:[dictionary trello_safeObjectForKey:@"url"]] copy];
-        _memberIdentifiers = [dictionary trello_safeObjectForKey:@"members"];
+        _memberIdentifiers = [dictionary trello_safeObjectForKey:@"idMembers"];
         
         NSArray *labelsArray = [dictionary trello_safeObjectForKey:@"labels"];
         NSMutableArray *mutableLabels = [NSMutableArray arrayWithCapacity:labelsArray.count];

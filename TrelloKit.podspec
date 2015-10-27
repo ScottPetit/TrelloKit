@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = 'TrelloKit'
-  spec.version = '0.0.6'
+  spec.version = '0.0.7'
   spec.authors = {'Scott Petit' => 'petit.scott@gmail.com'}
   spec.homepage = 'https://github.com/scottpetit/TrelloKit'
   spec.summary = 'An Objective-C wrapped for the Trello API.'

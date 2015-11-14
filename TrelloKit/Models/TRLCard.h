@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TRLCard : NSObject
+@interface TRLCard : NSObject <NSCopying>
 
 + (instancetype)cardWithDictionary:(NSDictionary *)dictionary;
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;

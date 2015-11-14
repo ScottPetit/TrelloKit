@@ -52,4 +52,21 @@
     return self;
 }
 
+- (id)copyWithZone:(NSZone *)zone {
+    TRLCard *result = [[[self class] allocWithZone:zone] init];
+    result.identifier = self.identifier;
+    result.name = self.name;
+    result.boardIdentifier = self.boardIdentifier;
+    result.cardDescription = self.cardDescription;
+    result.listIdentifier = self.listIdentifier;
+    result.closed = self.isClosed;
+    result.position = self.position;
+    result.dueDate = self.dueDate;
+    result.url = self.url;
+    result.memberIdentifiers = [self.memberIdentifiers copyWithZone:zone];
+    result.members = [self.members copyWithZone:zone];
+    result.labels = [self.labels copyWithZone:zone];
+    return result;
+}
+
 @end

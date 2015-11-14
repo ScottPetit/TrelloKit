@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TRLLabel : NSObject
+@interface TRLLabel : NSObject <NSCopying>
 
 + (instancetype)labelFromDictionary:(NSDictionary *)dictionary;
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;

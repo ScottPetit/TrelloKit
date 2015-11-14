@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1061142E8079D3E03D560DF8 /* libPods-TrelloKitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F5E3D33B4A7DD5A03D2BFF5 /* libPods-TrelloKitTests.a */; };
+		36DBAF3D1BF718A300458DA4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DBAF3C1BF718A300458DA4 /* libPods.a */; };
+		3D909FB15777C97E07C55A46 /* libPods-TrelloKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1FE8A7F2584411D4BE82C0 /* libPods-TrelloKit.a */; };
 		516F2BC817A4867100BB3F2F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 516F2BC717A4867100BB3F2F /* Foundation.framework */; };
 		516F2BCA17A4867100BB3F2F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 516F2BC917A4867100BB3F2F /* CoreGraphics.framework */; };
 		516F2BCC17A4867100BB3F2F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 516F2BCB17A4867100BB3F2F /* UIKit.framework */; };
@@ -31,17 +34,10 @@
 		D2F70F6A17AD556C0060ABF9 /* TRLLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F70F6917AD556C0060ABF9 /* TRLLabel.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		516F2BE417A4867100BB3F2F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 516F2BBC17A4867100BB3F2F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 516F2BC317A4867100BB3F2F;
-			remoteInfo = TrelloKit;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		24A6C55D5973F845045AA3DA /* Pods-TrelloKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrelloKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrelloKitTests/Pods-TrelloKitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2E1FE8A7F2584411D4BE82C0 /* libPods-TrelloKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TrelloKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36DBAF3C1BF718A300458DA4 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/../build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		516F2BC417A4867100BB3F2F /* TrelloKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrelloKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		516F2BC717A4867100BB3F2F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		516F2BC917A4867100BB3F2F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -67,8 +63,11 @@
 		516F2C1417A4921E00BB3F2F /* TrelloDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrelloDataManager.m; sourceTree = "<group>"; };
 		516F2C1517A4922B00BB3F2F /* TrelloHTTPClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrelloHTTPClient.h; sourceTree = "<group>"; };
 		516F2C1617A4922B00BB3F2F /* TrelloHTTPClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrelloHTTPClient.m; sourceTree = "<group>"; };
+		5771C77B2AF0B0CE3AC8CB5A /* Pods-TrelloKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrelloKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrelloKitTests/Pods-TrelloKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		643BF6E18E664BE480D0CE9A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B17453F69044F0196A0070D /* Pods-TrelloKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrelloKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrelloKit/Pods-TrelloKit.release.xcconfig"; sourceTree = "<group>"; };
 		8A7789EE09A1AA3EFE2FFEB2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		8F5E3D33B4A7DD5A03D2BFF5 /* libPods-TrelloKitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TrelloKitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D22A5A7217AC9CE5007B462E /* TRLDataManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRLDataManagerTests.m; sourceTree = "<group>"; };
 		D2A9AE2E17AC8A810060C6D8 /* TRLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRLViewController.h; sourceTree = "<group>"; };
 		D2A9AE2F17AC8A810060C6D8 /* TRLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRLViewController.m; sourceTree = "<group>"; };
@@ -83,6 +82,7 @@
 		D2F70F6817AD556C0060ABF9 /* TRLLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRLLabel.h; sourceTree = "<group>"; };
 		D2F70F6917AD556C0060ABF9 /* TRLLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRLLabel.m; sourceTree = "<group>"; };
 		D8C52A328826C94B0AA83E00 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F10845C27F721D02C4D27603 /* Pods-TrelloKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrelloKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrelloKit/Pods-TrelloKit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +94,7 @@
 				516F2BCC17A4867100BB3F2F /* UIKit.framework in Frameworks */,
 				516F2BC817A4867100BB3F2F /* Foundation.framework in Frameworks */,
 				C1FA61C7786745EEADA75647 /* libPods.a in Frameworks */,
+				3D909FB15777C97E07C55A46 /* libPods-TrelloKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,9 +102,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36DBAF3D1BF718A300458DA4 /* libPods.a in Frameworks */,
 				516F2BE117A4867100BB3F2F /* XCTest.framework in Frameworks */,
 				516F2BE317A4867100BB3F2F /* UIKit.framework in Frameworks */,
 				516F2BE217A4867100BB3F2F /* Foundation.framework in Frameworks */,
+				1061142E8079D3E03D560DF8 /* libPods-TrelloKitTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,11 +137,14 @@
 		516F2BC617A4867100BB3F2F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				36DBAF3C1BF718A300458DA4 /* libPods.a */,
 				516F2BC717A4867100BB3F2F /* Foundation.framework */,
 				516F2BC917A4867100BB3F2F /* CoreGraphics.framework */,
 				516F2BCB17A4867100BB3F2F /* UIKit.framework */,
 				516F2BE017A4867100BB3F2F /* XCTest.framework */,
 				643BF6E18E664BE480D0CE9A /* libPods.a */,
+				2E1FE8A7F2584411D4BE82C0 /* libPods-TrelloKit.a */,
+				8F5E3D33B4A7DD5A03D2BFF5 /* libPods-TrelloKitTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -230,6 +236,10 @@
 			children = (
 				8A7789EE09A1AA3EFE2FFEB2 /* Pods.debug.xcconfig */,
 				D8C52A328826C94B0AA83E00 /* Pods.release.xcconfig */,
+				24A6C55D5973F845045AA3DA /* Pods-TrelloKitTests.debug.xcconfig */,
+				5771C77B2AF0B0CE3AC8CB5A /* Pods-TrelloKitTests.release.xcconfig */,
+				7B17453F69044F0196A0070D /* Pods-TrelloKit.release.xcconfig */,
+				F10845C27F721D02C4D27603 /* Pods-TrelloKit.debug.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -257,7 +267,6 @@
 				516F2BC117A4867100BB3F2F /* Frameworks */,
 				516F2BC217A4867100BB3F2F /* Resources */,
 				73CDBB33AFF14A93A3D616A3 /* Copy Pods Resources */,
-				8F5A53C931285152B3A17A57 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -272,14 +281,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 516F2BF317A4867100BB3F2F /* Build configuration list for PBXNativeTarget "TrelloKitTests" */;
 			buildPhases = (
+				8A73A6171A1180B4D9581F60 /* Check Pods Manifest.lock */,
 				516F2BDB17A4867100BB3F2F /* Sources */,
 				516F2BDC17A4867100BB3F2F /* Frameworks */,
 				516F2BDD17A4867100BB3F2F /* Resources */,
+				F893A2B78BCB60E5C1A87743 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				516F2BE517A4867100BB3F2F /* PBXTargetDependency */,
 			);
 			name = TrelloKitTests;
 			productName = TrelloKitTests;
@@ -364,22 +374,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrelloKit/Pods-TrelloKit-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8F5A53C931285152B3A17A57 /* Embed Pods Frameworks */ = {
+		8A73A6171A1180B4D9581F60 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F893A2B78BCB60E5C1A87743 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrelloKitTests/Pods-TrelloKitTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -415,14 +440,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		516F2BE517A4867100BB3F2F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 516F2BC317A4867100BB3F2F /* TrelloKit */;
-			targetProxy = 516F2BE417A4867100BB3F2F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		516F2BFF17A486BF00BB3F2F /* InfoPlist.strings */ = {
@@ -516,7 +533,7 @@
 		};
 		516F2BF117A4867100BB3F2F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8A7789EE09A1AA3EFE2FFEB2 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = F10845C27F721D02C4D27603 /* Pods-TrelloKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -530,7 +547,7 @@
 		};
 		516F2BF217A4867100BB3F2F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8C52A328826C94B0AA83E00 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 7B17453F69044F0196A0070D /* Pods-TrelloKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -544,6 +561,7 @@
 		};
 		516F2BF417A4867100BB3F2F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24A6C55D5973F845045AA3DA /* Pods-TrelloKitTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TrelloKit.app/TrelloKit";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -566,6 +584,7 @@
 		};
 		516F2BF517A4867100BB3F2F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5771C77B2AF0B0CE3AC8CB5A /* Pods-TrelloKitTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TrelloKit.app/TrelloKit";
 				FRAMEWORK_SEARCH_PATHS = (

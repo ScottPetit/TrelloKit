@@ -13,6 +13,12 @@
 + (instancetype)cardWithDictionary:(NSDictionary *)dictionary;
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
+/**
+ Supported properties:
+ name, cardDescription, listIdentifier, boardIdentifier, closed, position, memberIdentifiers, dueDate
+ */
+- (NSDictionary *)updatedPropertiesWithBase:(TRLCard *)baseCard;
+
 @property (nonatomic, copy) NSString *identifier;
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *cardDescription;

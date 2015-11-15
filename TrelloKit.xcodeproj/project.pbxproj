@@ -8,7 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		1061142E8079D3E03D560DF8 /* libPods-TrelloKitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F5E3D33B4A7DD5A03D2BFF5 /* libPods-TrelloKitTests.a */; };
-		36DBAF3D1BF718A300458DA4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DBAF3C1BF718A300458DA4 /* libPods.a */; };
+		36DBAF401BF71AD500458DA4 /* TRLCardUpdatePropertiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DBAF3E1BF71AC700458DA4 /* TRLCardUpdatePropertiesTests.m */; };
+		36DBAF411BF8385900458DA4 /* TRLList.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F70F1917ACAE370060ABF9 /* TRLList.m */; };
+		36DBAF421BF8385900458DA4 /* TRLCard.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F70F1617ACAB0F0060ABF9 /* TRLCard.m */; };
+		36DBAF431BF8385900458DA4 /* TRLLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F70F6917AD556C0060ABF9 /* TRLLabel.m */; };
+		36DBAF441BF8386900458DA4 /* TRLBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 516F2C0B17A48ADE00BB3F2F /* TRLBoard.m */; };
+		36DBAF451BF8398100458DA4 /* NSDictionary+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D2CDB8081BDD509200DED4D6 /* NSDictionary+Extensions.m */; };
+		36DBAF461BF8398400458DA4 /* UIColor+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D2CDB8051BDD508600DED4D6 /* UIColor+Extensions.m */; };
 		3D909FB15777C97E07C55A46 /* libPods-TrelloKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1FE8A7F2584411D4BE82C0 /* libPods-TrelloKit.a */; };
 		516F2BC817A4867100BB3F2F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 516F2BC717A4867100BB3F2F /* Foundation.framework */; };
 		516F2BCA17A4867100BB3F2F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 516F2BC917A4867100BB3F2F /* CoreGraphics.framework */; };
@@ -102,7 +108,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36DBAF3D1BF718A300458DA4 /* libPods.a in Frameworks */,
 				516F2BE117A4867100BB3F2F /* XCTest.framework in Frameworks */,
 				516F2BE317A4867100BB3F2F /* UIKit.framework in Frameworks */,
 				516F2BE217A4867100BB3F2F /* Foundation.framework in Frameworks */,
@@ -305,11 +310,6 @@
 				CLASSPREFIX = TRL;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Scott Petit";
-				TargetAttributes = {
-					516F2BDE17A4867100BB3F2F = {
-						TestTargetID = 516F2BC317A4867100BB3F2F;
-					};
-				};
 			};
 			buildConfigurationList = 516F2BBF17A4867100BB3F2F /* Build configuration list for PBXProject "TrelloKit" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -434,7 +434,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36DBAF441BF8386900458DA4 /* TRLBoard.m in Sources */,
+				36DBAF431BF8385900458DA4 /* TRLLabel.m in Sources */,
 				D22A5A7417AC9D29007B462E /* TrelloDataManager.m in Sources */,
+				36DBAF421BF8385900458DA4 /* TRLCard.m in Sources */,
+				36DBAF461BF8398400458DA4 /* UIColor+Extensions.m in Sources */,
+				36DBAF411BF8385900458DA4 /* TRLList.m in Sources */,
+				36DBAF451BF8398100458DA4 /* NSDictionary+Extensions.m in Sources */,
 				D22A5A7317AC9CE5007B462E /* TRLDataManagerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -563,11 +569,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 24A6C55D5973F845045AA3DA /* Pods-TrelloKitTests.debug.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TrelloKit.app/TrelloKit";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
-					"$(SYSTEM_APPS_DIR)/Xcode5-DP3.app/Contents/Developer/Library/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Example/Other Sources/TrelloKit-Prefix.pch";
@@ -577,7 +581,6 @@
 				);
 				INFOPLIST_FILE = "Tests/TrelloKitTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -586,17 +589,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5771C77B2AF0B0CE3AC8CB5A /* Pods-TrelloKitTests.release.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TrelloKit.app/TrelloKit";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
-					"$(SYSTEM_APPS_DIR)/Xcode5-DP3.app/Contents/Developer/Library/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Example/Other Sources/TrelloKit-Prefix.pch";
 				INFOPLIST_FILE = "Tests/TrelloKitTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;

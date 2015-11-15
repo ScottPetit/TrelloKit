@@ -304,4 +304,14 @@
     }];
 }
 
+- (void)updateCard:(TRLCard *)baseCard toBeLike:(TRLCard *)mutatedCard success:(TrelloDataManagerSuccess)success failure:(TrelloDataManagerFailure)failure {
+    NSDictionary *changes = [mutatedCard updatedPropertiesWithBase:baseCard];
+    [self.client putCardWithIdentifier:baseCard.identifier updatedProperties:changes success:^(NSURLSessionDataTask *response, id responseObject) {
+        if (success != nil) {
+            success(response, [[TRLCard alloc] initWithDictionary:responseObject]);
+        }
+    } failure:failure];
+}
+
+
 @end

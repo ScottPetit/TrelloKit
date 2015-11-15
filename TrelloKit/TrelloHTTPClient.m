@@ -156,6 +156,11 @@
     }];
 }
 
+- (void)putCardWithIdentifier:(NSString *)identifier updatedProperties:(NSDictionary *)properties success:(TrelloHTTPClientSuccess)success failure:(TrelloHTTPClientFailure)failure {
+    NSString *path = [NSString stringWithFormat:@"cards/%@", identifier];
+    [self PUT:path parameters:properties success:success failure:failure];
+}
+
 #pragma mark - Overrides
 
 - (NSURLSessionDataTask *)dataTaskWithHTTPMethod:(NSString *)method

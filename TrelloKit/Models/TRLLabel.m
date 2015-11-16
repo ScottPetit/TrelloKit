@@ -28,4 +28,11 @@
     return self;
 }
 
+- (instancetype)copyWithZone:(NSZone *)zone {
+    TRLLabel *result = [[[self class] alloc] init];
+    result.color = self.color;
+    result.name = self.name;
+    return result;
+}
+
 @end

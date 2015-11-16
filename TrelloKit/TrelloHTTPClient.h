@@ -27,5 +27,6 @@ typedef void (^TrelloHTTPClientFailure)(NSURLSessionDataTask *task, NSError *err
 - (void)getCardsForListWithIdentifier:(NSString *)listIdentifier success:(TrelloHTTPClientSuccess)success failure:(TrelloHTTPClientFailure)failure;
 - (void)getCardsWithSuccess:(TrelloHTTPClientSuccess)success failure:(TrelloHTTPClientFailure)failure;
 - (void)getCardWithIdentifier:(NSString *)identifier success:(TrelloHTTPClientSuccess)success failure:(TrelloHTTPClientFailure)failure;
+- (void)putCardWithIdentifier:(NSString *)identifier updatedProperties:(NSDictionary *)properties success:(TrelloHTTPClientSuccess)success failure:(TrelloHTTPClientFailure)failure;
 
 @end

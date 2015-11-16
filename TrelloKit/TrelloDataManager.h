@@ -11,6 +11,7 @@
 @class TrelloHTTPClient;
 @class TRLBoard;
 @class TRLList;
+@class TRLCard;
 
 typedef void (^TrelloDataManagerSuccess)(NSURLSessionDataTask *task, id responseObject);
 typedef void (^TrelloDataManagerFailure)(NSURLSessionDataTask *task, NSError *error);
@@ -39,5 +40,11 @@ typedef void (^TrelloDataManagerFailure)(NSURLSessionDataTask *task, NSError *er
 - (void)cardsForListIdentifier:(NSString *)listIdentifier success:(TrelloDataManagerSuccess)success failure:(TrelloDataManagerFailure)failure;
 - (void)cardsWithSuccess:(TrelloDataManagerSuccess)success failure:(TrelloDataManagerFailure)failure;
 - (void)cardWithIdentifier:(NSString *)identifier success:(TrelloDataManagerSuccess)success failure:(TrelloDataManagerFailure)failure;
+
+/**
+ Supported properties:
+ name, cardDescription, listIdentifier, boardIdentifier, closed, position, memberIdentifiers, dueDate
+ */
+- (void)updateCard:(TRLCard *)baseCard toBeLike:(TRLCard *)mutatedCard success:(TrelloDataManagerSuccess)success failure:(TrelloDataManagerFailure)failure;
 
 @end

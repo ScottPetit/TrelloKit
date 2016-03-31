@@ -40,6 +40,7 @@ static NSDictionary *copyBindings;
             [self setValue:value forKey:selfKey];
         }];
         _closed = [dictionary[@"closed"] boolValue];
+        _subscribed = [dictionary[@"subscribed"] boolValue];
         _position = [dictionary[@"pos"] integerValue];
         _url = [[NSURL URLWithString:[dictionary trello_safeObjectForKey:@"url"]] copy];
         _memberIdentifiers = [dictionary trello_safeObjectForKey:@"idMembers"];
@@ -71,6 +72,7 @@ static NSDictionary *copyBindings;
     result.cardDescription = self.cardDescription;
     result.listIdentifier = self.listIdentifier;
     result.closed = self.isClosed;
+    result.subscribed = self.isSubscribed;
     result.position = self.position;
     result.dueDate = self.dueDate;
     result.url = self.url;
@@ -89,6 +91,10 @@ static NSDictionary *copyBindings;
             result[trelloKey] = newValue ?: [NSNull null];
         }
     }];
+    
+    if (self.isSubscribed != baseCard.isSubscribed) {
+        result[@"subscribed"] = @(self.isSubscribed);
+    }
 
     if (![[NSSet setWithArray:self.memberIdentifiers] isEqual:[NSSet setWithArray:baseCard.memberIdentifiers]]) {
         result[@"idMembers"] = [self.memberIdentifiers componentsJoinedByString:@","];

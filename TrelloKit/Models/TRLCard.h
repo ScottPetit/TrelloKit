@@ -25,6 +25,7 @@
 @property (nonatomic, copy) NSString *boardIdentifier;
 @property (nonatomic, copy) NSString *listIdentifier;
 @property (nonatomic, assign, getter = isClosed) BOOL closed;
+@property (nonatomic, assign, getter = isSubscribed) BOOL subscribed;
 @property (nonatomic, assign) NSInteger position;
 @property (nonatomic, strong) NSDate *dueDate;
 @property (nonatomic, copy) NSURL *url;

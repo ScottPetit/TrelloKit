@@ -28,6 +28,7 @@
         @"idMembers": @[@"memberA"],
         @"pos": @1,
         @"id": @123,
+        @"subscribed": @YES,
     }];
     
     self.mutatedCard = [self.baseCard copy];
@@ -38,6 +39,13 @@
     self.mutatedCard.memberIdentifiers = [self.mutatedCard.memberIdentifiers arrayByAddingObject:@"newMember"];
     NSDictionary *changes = [self.mutatedCard updatedPropertiesWithBase:self.baseCard];
     NSDictionary *etalon = @{@"idList": @"newListNumber", @"idMembers": @"memberA,newMember"};
+    XCTAssertEqualObjects(changes, etalon);
+}
+
+- (void)testSubscribed {
+    self.mutatedCard.subscribed = NO;
+    NSDictionary *changes = [self.mutatedCard updatedPropertiesWithBase:self.baseCard];
+    NSDictionary *etalon = @{@"subscribed": @NO};
     XCTAssertEqualObjects(changes, etalon);
 }
 
